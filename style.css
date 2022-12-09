@@ -7,11 +7,22 @@
     --sans: "josefin sans", sans serif;
 }
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    /* background: #222f3e; */
+
     background-image: url(images/Background-img.jpg);
+    background-color: var(--secondary-color);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: repeat-y;
+
 
 }
 
@@ -20,8 +31,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
+    width: 60vw;
     height: 70vh;
+
     background: var(--main-color);
     background: linear-gradient(40deg, var(--main-color) 0%, var(--secondary-color) 100%);
     border-radius: 5px;
@@ -31,12 +43,14 @@ body {
     letter-spacing: 0.5px;
     display: grid;
     place-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .inner {
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 100%;
     opacity: 1;
     -webkit-transition: 1s;
     transition: 1s;
@@ -54,7 +68,6 @@ body {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
 }
 
 .number::before {
@@ -108,12 +121,13 @@ body {
     font-size: 25px;
     opacity: 0.8;
     color: rgba(153, 140, 147, 1);
+
 }
 
 
 
 .text {
-    padding: 10%;
+    padding: 5%;
     color: rgba(153, 140, 147, 1);
     padding-bottom: 0%;
 }
@@ -126,7 +140,7 @@ body {
 
 .author {
     text-align: right;
-    font-size: 12px;
+    font-size: 17px;
     font-family: "Courier New", Courier, monospace;
     color: rgba(153, 140, 147, 1);
 }
@@ -162,4 +176,188 @@ body {
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
+}
+
+/* -----------------Media queries----------------------- */
+/*-------------- mobile view -------------------*/
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 70vw;
+    }
+
+    .box {
+        width: 75%;
+    }
+
+    .start-quote {
+        font-size: 48px;
+    }
+
+    #quotes {
+        padding-top: 8%;
+        padding-bottom: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 21px;
+    }
+
+    .author {
+        font-size: 16px;
+    }
+
+    #newQ {
+        font-size: 23px;
+        font-weight: 780;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 75vw;
+    }
+
+    .box {
+        width: 78%;
+    }
+
+    .start-quote {
+        font-size: 46px;
+    }
+
+    #quotes {
+        padding-top: 9%;
+        padding-bottom: 2%;
+        padding-left: 4%;
+        padding-right: 4%;
+        font-size: 20px;
+    }
+
+    .author {
+        font-size: 15px;
+    }
+
+    #newQ {
+        font-size: 22px;
+        font-weight: 760;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 82vw;
+    }
+
+    .box {
+        width: 80%;
+        height: 72%;
+    }
+
+    .start-quote {
+        font-size: 45px;
+    }
+
+    #quotes {
+        padding-top: 10%;
+        padding-bottom: 2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        font-size: 19px;
+    }
+
+    .author {
+        font-size: 14px;
+    }
+
+    #newQ {
+        font-size: 21px;
+        font-weight: 720;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 87vw;
+    }
+
+    .box {
+        width: 82%;
+    }
+
+    .start-quote {
+        font-size: 44px;
+    }
+
+    #quotes {
+        padding-top: 12%;
+        padding-bottom: 2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        font-size: 18px;
+    }
+
+    .author {
+        font-size: 13px;
+    }
+
+    #newQ {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 95vw;
+    }
+
+    .box {
+        height: 70%;
+    }
+
+    .start-quote {
+        font-size: 43px;
+    }
+
+    #quotes {
+        padding-top: 14%;
+        padding-bottom: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 17px;
+    }
+
+    .author {
+        font-size: 12px;
+    }
+
+    #newQ {
+        font-size: 19px;
+        font-weight: 640;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .container {
+        width: 97vw;
+    }
+
+    .box {
+        width: 85%;
+    }
+
+    .start-quote {
+        font-size: 40px;
+    }
+
+    #quotes {
+        padding-top: 16%;
+        padding-left: 11%;
+        padding-right: 11%;
+        font-size: 16px;
+    }
+
+    #newQ {
+        font-size: 18px;
+        font-weight: 600;
+    }
 }
