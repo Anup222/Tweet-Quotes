@@ -5,9 +5,11 @@ const newQ = document.getElementById("newQ");
 const tweetMe = document.getElementById("tweetMe");
 let realData = "";
 let quotesData = "";
+let sendAuthor="";
 
 const tweetNow = () => {
-    let tweetPost = `https://twitter.com/intent/tweet/?text=${quotesData.text}. Author: ${quotesData.author}`;
+
+    let tweetPost = `https://twitter.com/intent/tweet/?text=${quotesData.text} ${sendAuthor}`;
     window.open(tweetPost);
 };
 
@@ -16,10 +18,11 @@ const getNewQuotes = () => {
         Math.random() * 10 * (Math.random() * 10) * (Math.random() * 10)
     );
     quotesData = realData[rnum];
-    quotes.innerText = `${quotesData.text}`;
     quotesData.author == null
-        ? (author.innerText = `Unknown`)
-        : (author.innerText = `~By ${quotesData.author}`);
+        ? (sendAuthor = `~Author: Unknown`)
+        : (sendAuthor = `~By: ${quotesData.author}`);
+    quotes.innerText = `${quotesData.text}`;
+    author.innerText = `${sendAuthor}`;
 };
 
 const getQuotes = async () => {
