@@ -26,6 +26,20 @@ body {
 
 }
 
+.copyright {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(49, 47, 49);
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -33,7 +47,6 @@ body {
     transform: translate(-50%, -50%);
     width: 60vw;
     height: 70vh;
-
     background: var(--main-color);
     background: linear-gradient(40deg, var(--main-color) 0%, var(--secondary-color) 100%);
     border-radius: 5px;
@@ -209,6 +222,10 @@ body {
         font-size: 23px;
         font-weight: 780;
     }
+
+    .copyright {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -239,6 +256,10 @@ body {
     #newQ {
         font-size: 22px;
         font-weight: 760;
+    }
+
+    .copyright {
+        font-size: 11px;
     }
 }
 
@@ -272,6 +293,10 @@ body {
         font-size: 21px;
         font-weight: 720;
     }
+
+    .copyright {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -303,6 +328,10 @@ body {
         font-size: 20px;
         font-weight: 700;
     }
+
+    .copyright {
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -316,6 +345,10 @@ body {
 
     .start-quote {
         font-size: 43px;
+    }
+
+    .copyright {
+        font-size: 09px;
     }
 
     #quotes {
@@ -333,6 +366,10 @@ body {
     #newQ {
         font-size: 19px;
         font-weight: 640;
+    }
+
+    .copyright {
+        font-size: 8px;
     }
 }
 
@@ -359,5 +396,9 @@ body {
     #newQ {
         font-size: 18px;
         font-weight: 600;
+    }
+
+    .copyright {
+        font-size: 7px;
     }
 }
